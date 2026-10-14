@@ -1,0 +1,12 @@
+[project]
+name = "innodocapp"
+version = "1.0"
+dependencies = [
+    "requests",
+    "flask>=3.1.2",
+    "psycopg2-binary",
+    "pydantic>=2.12.5",
+    "pydantic[email]",
+]
+description = "This application simulates InnoDocAppV1.0."
+requires-python = ">=3.10"

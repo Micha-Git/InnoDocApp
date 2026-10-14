@@ -1,0 +1,10 @@
+{
+  "id": "1234",
+  "type": "partner",
+  "email": "john@innocomp.com",
+  "name": "John",
+  "properties": {
+    "secLevel": 7,
+    "sources": ["Horizon"]
+  }
+}

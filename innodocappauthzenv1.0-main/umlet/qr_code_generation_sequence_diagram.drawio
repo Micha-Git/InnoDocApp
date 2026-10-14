@@ -1,0 +1,237 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.1.2 Chrome/138.0.7204.243 Electron/37.4.0 Safari/537.36" version="28.1.2">
+  <diagram name="Page-1" id="zOXfGlSkTIenp8fFwcYJ">
+    <mxGraphModel dx="1837" dy="1169" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AlTppKLO_r6k3B739RfQ-23" value="" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontSize=18;" edge="1" parent="1" source="AlTppKLO_r6k3B739RfQ-33" target="AlTppKLO_r6k3B739RfQ-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="323" y="155" as="sourcePoint" />
+            <mxPoint x="484" y="155" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="392" y="152" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-24" value="User enters&lt;div&gt;webpage&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="AlTppKLO_r6k3B739RfQ-23">
+          <mxGeometry x="-0.2106" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-4" value="EUDI Verifier" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;size=28;" vertex="1" parent="1">
+          <mxGeometry x="1608" y="70.55" width="149.64" height="767.45" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-29" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;" vertex="1" parent="AlTppKLO_r6k3B739RfQ-4">
+          <mxGeometry x="69.28" y="285.45" width="11.08" height="254.55" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-30" value="Create proof request" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;fontSize=18;" edge="1" target="AlTppKLO_r6k3B739RfQ-29" parent="1" source="AlTppKLO_r6k3B739RfQ-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1461.4908088235295" y="364.49" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-31" value="Transaction id, QR code" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;fontSize=18;" edge="1" source="AlTppKLO_r6k3B739RfQ-29" parent="1" target="AlTppKLO_r6k3B739RfQ-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1461.4908088235295" y="434.49" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1446" y="399" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-32" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;fontSize=18;size=74;" vertex="1" parent="1">
+          <mxGeometry x="262" y="49" width="41" height="777" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-33" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;" vertex="1" parent="AlTppKLO_r6k3B739RfQ-32">
+          <mxGeometry x="14.96" y="95" width="11.08" height="651" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-1" value="UI-InnoDocApp" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;size=30;" vertex="1" parent="1">
+          <mxGeometry x="414" y="69" width="171.81" height="755" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-7" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;" vertex="1" parent="AlTppKLO_r6k3B739RfQ-1">
+          <mxGeometry x="80.36" y="71.21" width="11.08" height="161.79" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-47" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;" vertex="1" parent="AlTppKLO_r6k3B739RfQ-1">
+          <mxGeometry x="80.36" y="580" width="11.08" height="153" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-2" value="UI-SecureTokenService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;size=29;" vertex="1" parent="1">
+          <mxGeometry x="794.2" y="71.32" width="239.43" height="763.68" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-18" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;" vertex="1" parent="AlTppKLO_r6k3B739RfQ-2">
+          <mxGeometry x="114.17" y="206.65" width="11.08" height="251.35" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-3" value="SecureTokenService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;size=26;" vertex="1" parent="1">
+          <mxGeometry x="1255.32" y="71.32" width="195.09" height="761.68" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-26" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;" vertex="1" parent="AlTppKLO_r6k3B739RfQ-3">
+          <mxGeometry x="92" y="273.68" width="11.08" height="340.32" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-44" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;" vertex="1" parent="AlTppKLO_r6k3B739RfQ-3">
+          <mxGeometry x="99.68198529411757" y="558.368034682081" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-45" value="Transform claims&lt;div&gt;Issue JWT for InnoDocApp&lt;/div&gt;" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;fontSize=18;" edge="1" target="AlTppKLO_r6k3B739RfQ-44" parent="AlTppKLO_r6k3B739RfQ-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="102.0799999999997" y="542.6776923076925" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="135" y="542.69" />
+              <mxPoint x="135" y="578.69" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-5" value="InnoDocApp-Proxy" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;size=29;" vertex="1" parent="1">
+          <mxGeometry x="1046.93" y="71.32" width="187.33" height="752.68" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-14" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;" vertex="1" parent="AlTppKLO_r6k3B739RfQ-5">
+          <mxGeometry x="88.12224264705883" y="103.71445086705204" width="11.084558823529411" height="85.13872832369943" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-49" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;" vertex="1" parent="AlTppKLO_r6k3B739RfQ-5">
+          <mxGeometry x="88.12" y="605" width="11.08" height="121" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-52" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontSize=18;" vertex="1" parent="AlTppKLO_r6k3B739RfQ-5">
+          <mxGeometry x="94.06999999999994" y="674.6800000000001" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-53" value="Verify JWT signature&lt;div&gt;Process the request&lt;/div&gt;&lt;div&gt;down the chain&lt;/div&gt;" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;fontSize=18;" edge="1" target="AlTppKLO_r6k3B739RfQ-52" parent="AlTppKLO_r6k3B739RfQ-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="99.06999999999994" y="654.6800000000001" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="129.06999999999994" y="684.6800000000001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-16" value="Deny request and redirect&amp;nbsp;&lt;div&gt;user to UI-SecureTokenService&amp;nbsp;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;fontSize=18;" edge="1" source="AlTppKLO_r6k3B739RfQ-14" parent="1" target="AlTppKLO_r6k3B739RfQ-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="655.6433823529412" y="604.6" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="874.0091911764705" y="234.6335260115607" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-15" value="Fetch all allowed documents&amp;nbsp;&lt;div&gt;with no identity proof&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontSize=18;entryX=0;entryY=0;entryDx=0;entryDy=5;entryPerimeter=0;" edge="1" target="AlTppKLO_r6k3B739RfQ-14" parent="1" source="AlTppKLO_r6k3B739RfQ-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="506.00183823529414" y="192.83815028901734" as="sourcePoint" />
+            <mxPoint x="956.0349264705882" y="192.83815028901734" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-19" value="" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;fontSize=18;dashed=1;dashPattern=12 12;" edge="1" target="AlTppKLO_r6k3B739RfQ-18" parent="1" source="AlTppKLO_r6k3B739RfQ-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="830.7794117647059" y="285.7167630057803" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-27" value="Generate QR code" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;fontSize=18;" edge="1" target="AlTppKLO_r6k3B739RfQ-26" parent="1" source="AlTppKLO_r6k3B739RfQ-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1269.7279411764705" y="350" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-21" value="" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontSize=18;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="288.99999999999994" y="332.9950289017342" as="sourcePoint" />
+            <mxPoint x="909.3313235294117" y="332.9950289017342" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-22" value="Click on start verification" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="AlTppKLO_r6k3B739RfQ-21">
+          <mxGeometry x="-0.2106" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-28" value="QR code" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;fontSize=18;" edge="1" source="AlTppKLO_r6k3B739RfQ-26" parent="1" target="AlTppKLO_r6k3B739RfQ-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1255.3149264705883" y="413" as="targetPoint" />
+            <mxPoint x="1345.0998529411766" y="413.32196531791624" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1221" y="412" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-34" value="Loop&amp;nbsp;&lt;div&gt;getPresentationStatus(transaction id)&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontSize=18;" edge="1" parent="1" target="AlTppKLO_r6k3B739RfQ-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1358.4044117647059" y="451.0019653179191" as="sourcePoint" />
+            <mxPoint x="1610.7184558823528" y="451.0019653179191" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-35" value="" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontSize=18;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="288.03999999999996" y="449" as="sourcePoint" />
+            <mxPoint x="908.3703676470586" y="449" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-36" value="Scan QR code with wallet" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="AlTppKLO_r6k3B739RfQ-35">
+          <mxGeometry x="-0.2106" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-37" value="" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontSize=18;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="288.03999999999996" y="511" as="sourcePoint" />
+            <mxPoint x="1677.2784558823532" y="511" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-38" value="Present credential information through OpenID4VP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="AlTppKLO_r6k3B739RfQ-37">
+          <mxGeometry x="-0.2106" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-39" value="&lt;div&gt;getPresentationStatus(transaction id)&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontSize=18;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1358.3980147058824" y="547.0019653179191" as="sourcePoint" />
+            <mxPoint x="1677.2784558823528" y="547.0019653179191" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-41" value="" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fontSize=18;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1357.9980147058823" y="591.9950000000001" as="targetPoint" />
+            <mxPoint x="1676.8784558823527" y="591.9950000000001" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-43" value="&lt;font&gt;Status = presented, credential claims&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="AlTppKLO_r6k3B739RfQ-41">
+          <mxGeometry x="0.1329" y="-1" relative="1" as="geometry">
+            <mxPoint x="22" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-46" value="Redirect user to UI-InnoDocApp and provide the JWT" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fontSize=18;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="505.99999999999983" y="662.0019653179191" as="targetPoint" />
+            <mxPoint x="1347.8680147058824" y="662.0019653179191" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-48" value="Fetch all allowed documents&amp;nbsp;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;with JWT embedded in the request&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontSize=18;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="506.00000000000006" y="704" as="sourcePoint" />
+            <mxPoint x="1135.6100000000001" y="704" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-54" value="" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontSize=18;" edge="1" parent="1" source="AlTppKLO_r6k3B739RfQ-33" target="AlTppKLO_r6k3B739RfQ-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310.64" y="736" as="sourcePoint" />
+            <mxPoint x="414.0000000000001" y="711" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="442" y="784" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-55" value="Any request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="AlTppKLO_r6k3B739RfQ-54">
+          <mxGeometry x="-0.2106" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-56" value="Further requests are authenticated,&amp;nbsp;&lt;div&gt;and only need to be authorized&lt;/div&gt;" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="255" y="874" width="314" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-57" value="" style="html=1;verticalAlign=bottom;endArrow=none;dashed=1;endSize=8;rounded=0;fontSize=18;endFill=0;" edge="1" parent="1" source="AlTppKLO_r6k3B739RfQ-56">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="392" y="802" as="targetPoint" />
+            <mxPoint x="922" y="1015" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-58" value="" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fontSize=18;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1358" y="492" as="targetPoint" />
+            <mxPoint x="1676.8804411764704" y="492" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AlTppKLO_r6k3B739RfQ-59" value="&lt;font&gt;Status = pending&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="AlTppKLO_r6k3B739RfQ-58">
+          <mxGeometry x="0.1329" y="-1" relative="1" as="geometry">
+            <mxPoint x="22" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

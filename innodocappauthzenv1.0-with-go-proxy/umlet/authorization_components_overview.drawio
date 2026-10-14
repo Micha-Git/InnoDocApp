@@ -1,0 +1,97 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.1.2 Chrome/138.0.7204.243 Electron/37.4.0 Safari/537.36" version="28.1.2">
+  <diagram name="Page-1" id="_d7-xjbbUU-fCt_WS4Yp">
+    <mxGraphModel dx="1778" dy="963" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-1" value="«Application + PEP»&lt;br&gt;&lt;b&gt;InnoDocAppV1.0&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="-88" y="424" width="213" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-2" value="" style="shape=module;jettyWidth=8;jettyHeight=4;fontSize=18;" parent="2-up8WzUOYgiQ5UwBK1r-1" vertex="1">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-3" value="«External System»&lt;br&gt;&lt;b&gt;InnoDocStore&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="756.5" y="424" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-4" value="" style="shape=module;jettyWidth=8;jettyHeight=4;fontSize=18;" parent="2-up8WzUOYgiQ5UwBK1r-3" vertex="1">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-5" value="«PDP»&lt;br&gt;&lt;b&gt;Open Policy Agent&lt;br&gt;(OPA)&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="-87" y="121" width="212" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-6" value="" style="shape=module;jettyWidth=8;jettyHeight=4;fontSize=18;" parent="2-up8WzUOYgiQ5UwBK1r-5" vertex="1">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-7" value="«PIP»&lt;br&gt;&lt;b&gt;PIP-InnoDocAppAuthZENV1.0&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="691" y="112.5" width="311" height="107" as="geometry" />
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-8" value="" style="shape=module;jettyWidth=8;jettyHeight=4;fontSize=18;" parent="2-up8WzUOYgiQ5UwBK1r-7" vertex="1">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-12" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;startArrow=classic;startFill=1;fontSize=18;" parent="1" source="2-up8WzUOYgiQ5UwBK1r-7" target="2-up8WzUOYgiQ5UwBK1r-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="571" y="454" as="sourcePoint" />
+            <mxPoint x="464" y="506" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-22" value="synchronize" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" parent="2-up8WzUOYgiQ5UwBK1r-12" vertex="1" connectable="0">
+          <mxGeometry x="0.0614" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-13" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;fontSize=18;" parent="1" source="2-up8WzUOYgiQ5UwBK1r-1" target="2-up8WzUOYgiQ5UwBK1r-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="599" y="536" as="sourcePoint" />
+            <mxPoint x="565" y="789" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-23" value="fetch allowed documents" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" parent="2-up8WzUOYgiQ5UwBK1r-13" vertex="1" connectable="0">
+          <mxGeometry x="-0.1316" y="3" relative="1" as="geometry">
+            <mxPoint x="12" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;fontSize=18;" parent="1" source="2-up8WzUOYgiQ5UwBK1r-5" target="2-up8WzUOYgiQ5UwBK1r-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="341" y="151" as="sourcePoint" />
+            <mxPoint x="476" y="264" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-15" value="Accesses to&amp;nbsp;&lt;br&gt;perform authorization&lt;br&gt;decision" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" parent="2-up8WzUOYgiQ5UwBK1r-14" vertex="1" connectable="0">
+          <mxGeometry x="-0.2654" relative="1" as="geometry">
+            <mxPoint x="82" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;fontSize=18;" parent="1" source="2-up8WzUOYgiQ5UwBK1r-1" target="2-up8WzUOYgiQ5UwBK1r-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="137" as="sourcePoint" />
+            <mxPoint x="586" y="137" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-19" value="Ask authorization decision" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" parent="2-up8WzUOYgiQ5UwBK1r-18" vertex="1" connectable="0">
+          <mxGeometry x="-0.2654" relative="1" as="geometry">
+            <mxPoint x="-12" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-20" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontSize=18;" parent="1" source="2-up8WzUOYgiQ5UwBK1r-5" target="2-up8WzUOYgiQ5UwBK1r-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="333" y="477" as="sourcePoint" />
+            <mxPoint x="333" y="324" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2-up8WzUOYgiQ5UwBK1r-21" value="Return authorization decision" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" parent="2-up8WzUOYgiQ5UwBK1r-20" vertex="1" connectable="0">
+          <mxGeometry x="-0.2654" relative="1" as="geometry">
+            <mxPoint x="21" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

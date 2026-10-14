@@ -1,0 +1,7 @@
+{
+  "id": email,
+  "type": type = "Document Partner Access Credential" ? "partner" : 
+          type = "Document Manager Access Credential" ? "manager" : 
+          type,
+  "properties": properties
+}

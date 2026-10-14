@@ -1,0 +1,7 @@
+[project]
+name = "innodocapputhzen_e2e_tester"
+version = "1.0"
+dependencies = ["requests", "pytest>=9.0.2"]
+description = "This application is used to perform E2E and integration tests on the authorization architecture."
+authors = [{ name = "Luis Hartmann", email = "uvret@student.kit.edu" }]
+requires-python = ">=3.10"

@@ -1,0 +1,167 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:16
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./services/postgres:/docker-entrypoint-initdb.d
+    networks:
+      - backend
+    ports:
+      - 5432:5432
+
+  pdp:
+    container_name: opa
+    image: openpolicyagent/opa:latest
+    environment:
+      - PIP_DOCUMENT_ATTRIBUTES_URL=${PIP_DOCUMENT_ATTRIBUTES_URL}
+    command:
+      - "run"
+      - "--server"
+      - "--set=decision_logs.console=true"
+      - "--addr=0.0.0.0:80"
+      - "/policies/"
+    depends_on:
+      - pip
+    volumes:
+      - ./services/pdp:/policies
+    networks:
+      - backend
+    ports:
+      - 8181:80
+
+  pip:
+    container_name: pip_innodocappauthzen
+    image: postgrest/postgrest:v14.2
+    environment:
+      PGRST_DB_URI: ${DB_CONNECTION_STRING}
+      PGRST_DB_SCHEMAS: ${DB_API_SCHEMA_NAME}
+      PGRST_DB_ANON_ROLE: ${DB_API_ANONYMOUS_ROLE}
+    command: ["postgrest"]
+    depends_on:
+      - postgres
+    networks:
+      - backend
+    ports:
+      - 3000:3000
+
+  innodocapp-proxy:
+    container_name: innodocapp-proxy
+    build: ./services/innodocapp-proxy
+    depends_on:
+      - innodocapp
+    environment:
+      OPA_EVALUATION_URL: ${OPA_EVALUATION_URL}
+      INNODOCAPP_HOST: ${INNODOCAPP_HOST}
+      UI_STS_AUTH_URL: ${UI_STS_AUTH_URL}
+      UI_RETURN_URL_BASE: ${INNODOCAPP_UI}
+      STS_PUBLIC_KEY_B64: ${STS_PUBLIC_KEY_B64}
+    networks:
+      - backend
+    ports:
+      - "8081:80"
+
+  ui-secure-token-service:
+    container_name: ui-secure-token-service
+    build: ./services/secure-token-service/frontend
+    depends_on:
+      - secure-token-service
+    networks:
+      - backend
+    ports:
+      - "8083:80"
+
+  secure-token-service:
+    stop_grace_period: 1s
+    container_name: secure-token-service
+    build: ./services/secure-token-service/backend
+    networks:
+      - backend
+    ports:
+      - "9000:80"
+    environment:
+      STS_PRIVATE_KEY_PATH: ${STS_PRIVATE_KEY_PATH}
+      STS_PUBLIC_KEY_PATH: ${STS_PUBLIC_KEY_PATH}
+      SUBJECT_JSON_PATH: ${SUBJECT_JSON_PATH}
+      STS_ISSUER: ${STS_ISSUER}
+      STS_AUDIENCE: ${STS_AUDIENCE}
+      STS_VERIFIER_URL: ${STS_VERIFIER_URL}
+      STS_VERIFIER_INIT_PATH: ${STS_VERIFIER_INIT_PATH}
+      STS_VERIFIER_RESPONSE_MODE: ${STS_VERIFIER_RESPONSE_MODE}
+      STS_VERIFIER_JAR_MODE: ${STS_VERIFIER_JAR_MODE}
+      STS_VERIFIER_PROFILE: ${STS_VERIFIER_PROFILE}
+      STS_VERIFIER_AUTHORIZATION_REQUEST_SCHEME: ${STS_VERIFIER_AUTHORIZATION_REQUEST_SCHEME}
+      STS_VERIFIER_DCQL_QUERY_JSON: ${STS_VERIFIER_DCQL_QUERY_JSON}
+    volumes:
+      - ./services/secure-token-service/keys:/keys:ro
+      - ./services/secure-token-service/subject.json:/data/subject.json:ro
+
+  ui-innodocapp:
+    container_name: ui-innodocapp
+    build: ./services/innodocapp/frontend
+    networks:
+      - backend
+    ports:
+      - 8082:80
+
+  innodocapp:
+    stop_grace_period: 1s
+    container_name: innodocapp
+    build: ./services/innodocapp/backend
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      OPA_EVALUATION_URL: ${OPA_EVALUATION_URL}
+      OPA_RESOURCE_SEARCH_URL: ${OPA_RESOURCE_SEARCH_URL}
+    depends_on:
+      - opa-proxy
+    networks:
+      - backend
+    ports:
+      - 5000:80
+  opa-proxy:
+    container_name: opa-proxy
+    build: ./services/opa-proxy
+    depends_on:
+      - pdp
+    command:
+      - --component-log-level ext_authz:trace
+      - -c /etc/envoy/envoy.yaml
+    networks:
+      - backend
+    ports:
+      - 8080:80
+    volumes:
+      - ./services/opa-proxy/envoy.yaml:/etc/envoy/envoy.yaml
+      - ./services/opa-proxy/transform.lua:/etc/envoy/lua/transform.lua:ro
+
+  tests:
+    container_name: tests
+    build: ./services/tests
+    environment:
+      RESOURCE_SEARCH_URI: ${OPA_RESOURCE_SEARCH_URL}
+      EVALUATION_URI: ${OPA_EVALUATION_URL}
+      EVALUATIONS_URI: ${OPA_EVALUATIONS_URL}
+      INNODOCAPP_HOST: ${INNODOCAPP_HOST}
+      INNODOCAPP_PROXY_HOST: ${INNODOCAPP_PROXY_HOST}
+    volumes:
+      - ./services/tests/results:/app/results
+    depends_on:
+      - pdp
+      - pip
+      - innodocapp
+      - postgres
+    networks:
+      - backend
+
+volumes:
+  postgres_data:
+
+networks:
+  backend:

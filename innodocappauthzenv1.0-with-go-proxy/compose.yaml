@@ -1,0 +1,129 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:16
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres:/docker-entrypoint-initdb.d
+    networks:
+      - backend
+    ports:
+      - 5432:5432
+
+  pdp:
+    container_name: opa
+    image: openpolicyagent/opa:latest
+    environment:
+      - PIP_DOCUMENT_ATTRIBUTES_URL=${PIP_DOCUMENT_ATTRIBUTES_URL}
+    command:
+      - "run"
+      - "-s"
+      - "/policies/"
+      - "--addr=0.0.0.0:8181"
+    depends_on:
+      - pip
+    volumes:
+      - ./pdp:/policies
+    networks:
+      - backend
+    ports:
+      - 8181:8181
+
+  pip:
+    container_name: pip_innodocappauthzen
+    image: postgrest/postgrest:v14.2
+    environment:
+      PGRST_DB_URI: "postgres://authenticator:pippassword@postgres:5432/innodocdatabase"
+      PGRST_DB_SCHEMAS: "pip"
+      PGRST_DB_ANON_ROLE: "web_pip"
+    command: ["postgrest"]
+    depends_on:
+      - postgres
+    networks:
+      - backend
+    ports:
+      - 3000:3000
+
+  innodocapp:
+    container_name: innodocapp
+    build: ./innodocapp
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      OPA_EVALUATION_URL: ${OPA_EVALUATION_URL}
+      OPA_RESOURCE_SEARCH_URL: ${OPA_RESOURCE_SEARCH_URL}
+    depends_on:
+      - opa-proxy
+    networks:
+      - backend
+    ports:
+      - 5000:5000
+  opa-proxy:
+    container_name: opa-proxy
+    image: envoyproxy/envoy:v1.36-latest
+    depends_on:
+      - pdp
+    command: 
+      - --component-log-level ext_authz:trace
+      - -c /etc/envoy/envoy.yaml
+    networks:
+      - backend
+    ports:
+      - 8080:8080
+    volumes:
+      - ./opa-proxy/envoy.yaml:/etc/envoy/envoy.yaml
+
+  go-proxy:
+    container_name: go-proxy
+    build: ./go-proxy
+    depends_on:
+      - pdp
+    networks:
+      - backend
+    ports:
+      - 8282:8282
+
+  go-proxy-static:
+    container_name: go-proxy-static
+    build: ./go-proxy-static
+    depends_on:
+      - pdp
+    networks:
+      - backend
+    ports:
+      - 8383:8383
+
+  go-proxy-scratch:
+    container_name: go-proxy-scratch
+    build: ./go-proxy-scratch
+    depends_on:
+      - pdp
+    networks:
+      - backend
+    ports:
+      - 8484:8484
+
+
+
+  # This service will perform network requests to test connectivity and policies.
+  # In the future, it can be used for end-to-end testing with multiple containers.
+  requester:
+    container_name: netshoot
+    image: nicolaka/netshoot:v0.14
+    networks:
+      - backend
+    command:
+      - sleep
+      - infinity
+
+volumes:
+  postgres_data:
+
+networks:
+  backend:
