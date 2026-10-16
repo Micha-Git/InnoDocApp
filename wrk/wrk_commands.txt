@@ -1,0 +1,45 @@
+wrk configurations (ensure to use the correct application configuration when run)
+
+
+InnoDocApp without Authorization:
+
+wrk -t2 -c20 -d300s --latency -H 'Authorization: {"type":"partner","id":"john","properties":{"sources":["Horizon", "Orion"],"secLevel":5}}' http://localhost:5000/docs2
+
+----------------------------------------------------
+
+InnoDocApp with Fine Grained Authorization:
+
+wrk -t2 -c20 -d300s --latency -H 'Authorization: {"type":"partner","id":"john","properties":{"sources":["Horizon", "Orion"],"secLevel":5}}' http://localhost:5000/docs
+
+----------------------------------------------------
+
+InnoDocApp with Medium- and Fine-Grained Authorization:
+
+wrk -t2 -c20 -d300s --latency -H 'Authorization: Bearer [INSERT_ACCESS_TOKEN]' http://localhost:8081/docs
+
+----------------------------------------------------
+
+OPA Proxy:
+
+wrk -t2 -c20 -d300s --latency -s opa.lua http://localhost:8181/v1/data/evaluations/response
+
+
+----------------------------------------------------
+
+Go Proxy:
+
+wrk -t2 -c20 -d300s --latency -s proxy.lua http://localhost:8282/v1/data/evaluations/response
+
+----------------------------------------------------
+
+Envoy Proxy:
+
+wrk -t2 -c20 -d300s --latency -s proxy.lua http://localhost:8080/access/v1/evaluations
+
+
+How to run (requires Docker)
+- Copy scripts to execution path
+- Build docker files (docker-compose up --build -d)
+- When the bearer token is required for the wrk command, you need to recieve the bearer token (Note: you can access Keycloak to change the token life time using Login "admin" and password "change_me". Keycloak is running on port 8484).
+	- Afterwards Login to InndDocApp (http://localhost:8082/ with user "John", password "John") and recieve the bearer token)  
+- Run wrk commands (see above)
