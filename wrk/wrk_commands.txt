@@ -1,7 +1,7 @@
 wrk configurations (ensure to use the correct application configuration when run)
 
 
-InnoDocApp without Authorization:
+InnoDocApp without Authorization (use no-authz version):
 
 wrk -t2 -c20 -d300s --latency -H 'Authorization: {"type":"partner","id":"john","properties":{"sources":["Horizon", "Orion"],"secLevel":5}}' http://localhost:5000/docs2
 
@@ -23,18 +23,19 @@ OPA Proxy:
 
 wrk -t2 -c20 -d300s --latency -s opa.lua http://localhost:8181/v1/data/evaluations/response
 
-
-----------------------------------------------------
-
-Go Proxy:
-
-wrk -t2 -c20 -d300s --latency -s proxy.lua http://localhost:8282/v1/data/evaluations/response
-
 ----------------------------------------------------
 
 Envoy Proxy:
 
-wrk -t2 -c20 -d300s --latency -s proxy.lua http://localhost:8080/access/v1/evaluations
+wrk -t2 -c20 -d300s --latency -s proxy.lua http://localhost:8080/access/v1/Evaluations
+
+----------------------------------------------------
+
+Go Proxy (use Go Proxy Version):
+
+wrk -t2 -c20 -d300s --latency -s proxy.lua http://localhost:8282/v1/data/evaluations/response
+
+----------------------------------------------------
 
 
 How to run (requires Docker)
