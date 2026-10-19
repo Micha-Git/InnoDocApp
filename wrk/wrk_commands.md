@@ -1,4 +1,16 @@
-wrk configurations (ensure to use the correct application configuration when run)
+# Worker commands
+
+## How to run (requires Docker)
+
+- Copy LUA scripts to the path you execute the wrk commands
+- Build docker files (docker-compose up --build -d)
+- When the bearer token is required for the wrk command, you need to recieve the bearer token (Note: you can access Keycloak to change the token life time using Login "admin" and password "change_me". Keycloak is running on port 8484).
+	- Afterwards Login to InndDocApp (http://localhost:8082/ with user "John", password "John") and recieve the bearer token)  
+- Run wrk commands (see above)
+
+
+## wrk configurations 
+Note: Ensure to use the correct application configuration when run
 
 
 InnoDocApp without Authorization (use no-authz version):
@@ -36,11 +48,3 @@ Go Proxy (use Go Proxy Version):
 wrk -t2 -c20 -d300s --latency -s proxy.lua http://localhost:8282/v1/data/evaluations/response
 
 ----------------------------------------------------
-
-
-How to run (requires Docker)
-- Copy LUA scripts to the path you execute the wrk commands
-- Build docker files (docker-compose up --build -d)
-- When the bearer token is required for the wrk command, you need to recieve the bearer token (Note: you can access Keycloak to change the token life time using Login "admin" and password "change_me". Keycloak is running on port 8484).
-	- Afterwards Login to InndDocApp (http://localhost:8082/ with user "John", password "John") and recieve the bearer token)  
-- Run wrk commands (see above)
