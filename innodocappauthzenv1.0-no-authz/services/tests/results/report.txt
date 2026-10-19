@@ -1,0 +1,67 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.8, pytest-9.1.1, pluggy-1.6.0
+rootdir: /app
+configfile: pyproject.toml
+collected 53 items
+
+integration/test_authzen_conformance_opa.py .....                        [  9%]
+integration/test_document_access_api.py ..........                       [ 28%]
+integration/test_document_search_api.py ..........                       [ 47%]
+integration/test_subject_format.py .........................             [ 94%]
+integration/test_vp_jwt_validation.py ...                                [100%]
+
+=========================== short test summary info ============================
+PASSED integration/test_authzen_conformance_opa.py::TestOPAEndpoints::test_document_search_seclevel_7
+PASSED integration/test_authzen_conformance_opa.py::TestOPAEndpoints::test_document_search_seclevel_1
+PASSED integration/test_authzen_conformance_opa.py::TestOPAEndpoints::test_document_access_seclevel_1
+PASSED integration/test_authzen_conformance_opa.py::TestOPAEndpoints::test_document_access_seclevel_10
+PASSED integration/test_authzen_conformance_opa.py::TestOPAEndpoints::test_jwt_validation_invalid
+PASSED integration/test_document_access_api.py::TestDocumentAccessAPI::test_validate_authorization_status_code[partner_orion_below_secLevel]
+PASSED integration/test_document_access_api.py::TestDocumentAccessAPI::test_validate_authorization_status_code[partner_orion_meets_secLevel]
+PASSED integration/test_document_access_api.py::TestDocumentAccessAPI::test_validate_authorization_status_code[projectmanager_orion_any_secLevel]
+PASSED integration/test_document_access_api.py::TestDocumentAccessAPI::test_validate_authorization_status_code[partner_horizon_below_secLevel]
+PASSED integration/test_document_access_api.py::TestDocumentAccessAPI::test_validate_authorization_status_code[partner_horizon_meets_secLevel]
+PASSED integration/test_document_access_api.py::TestDocumentAccessAPI::test_validate_authorization_status_code[projectmanager_horizon_any_secLevel]
+PASSED integration/test_document_access_api.py::TestDocumentAccessAPI::test_validate_authorization_status_code[projectmanager_orion_accessing_horizon]
+PASSED integration/test_document_access_api.py::TestDocumentAccessAPI::test_validate_authorization_status_code[partner_orion_accessing_horizon]
+PASSED integration/test_document_access_api.py::TestDocumentAccessAPI::test_validate_authorization_status_code[projectmanager_horizon_accessing_orion]
+PASSED integration/test_document_access_api.py::TestDocumentAccessAPI::test_validate_authorization_status_code[partner_horizon_accessing_orion]
+PASSED integration/test_document_search_api.py::TestDocumentSearchAPI::test_validate_document_search[partner_seclevel5_project_orion]
+PASSED integration/test_document_search_api.py::TestDocumentSearchAPI::test_validate_document_search[partner_seclevel1_project_orion]
+PASSED integration/test_document_search_api.py::TestDocumentSearchAPI::test_validate_document_search[partner_seclevel10_project_orion]
+PASSED integration/test_document_search_api.py::TestDocumentSearchAPI::test_validate_document_search[projectmanager_seclevel1_project_orion]
+PASSED integration/test_document_search_api.py::TestDocumentSearchAPI::test_validate_document_search[projectmanager_seclevel10_project_orion]
+PASSED integration/test_document_search_api.py::TestDocumentSearchAPI::test_validate_document_search[partner_seclevel5_project_horizon]
+PASSED integration/test_document_search_api.py::TestDocumentSearchAPI::test_validate_document_search[partner_seclevel1_project_horizon]
+PASSED integration/test_document_search_api.py::TestDocumentSearchAPI::test_validate_document_search[partner_seclevel10_project_horizon]
+PASSED integration/test_document_search_api.py::TestDocumentSearchAPI::test_validate_document_search[projectmanager_seclevel1_project_horizon]
+PASSED integration/test_document_search_api.py::TestDocumentSearchAPI::test_validate_document_search[projectmanager_seclevel10_project_horizon]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_sources[valid_single_source_horizon]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_sources[valid_single_source_orion]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_sources[valid_both_sources]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_sources[valid_project]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_sources[valid_mixed_sources]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_sources[numeric_invalid]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_sources[string_invalid]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_sources[dict_invalid]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_sources[numeric_invalid_2]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_sources[none_invalid]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_id[valid_email]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_id[invalid_id]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_id[emailish_but_not_email]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_id[numeric_invalid]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_id[none_invalid]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_subject_type[partner_valid]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_subject_type[project_manager_valid]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_subject_type[invalid_subject]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_subject_type[numeric_invalid]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_validate_subject_type[none_invalid]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_secLevel_validation[below_lower_bound]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_secLevel_validation[above_upper_bound]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_secLevel_validation[valid_upper_bound]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_secLevel_validation[valid_lower_bound]
+PASSED integration/test_subject_format.py::TestSubjectFormat::test_resource_search_invalid_attribute
+PASSED integration/test_vp_jwt_validation.py::TestVPJWTValidation::test_verify_jwt_valid
+PASSED integration/test_vp_jwt_validation.py::TestVPJWTValidation::test_verify_jwt_invalid_jwt
+PASSED integration/test_vp_jwt_validation.py::TestVPJWTValidation::test_verify_jwt_signed_unallowed_keys
+============================== 53 passed in 1.28s ==============================
