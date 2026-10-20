@@ -1,8 +1,8 @@
 # InnoDocApp
-Reference implementation of InnoDocApp: fine-grained, AuthZEN-based authorization using verifiable credentials (EUDI/SD-JWT), with STS, OPA/Rego, tests and benchmarks.
+Reference implementation of InnoDocApp, demonstrating fine-grained, AuthZEN-based authorization using verifiable credentials (EUDI/SD-JWT), with Security Token Service (STS) integration, Open Policy Agent (OPA)/Rego policies, automated tests, and performance benchmarks.
 
-The application is documented in the main application [README.md](/innodocappauthzenv1.0-main/README.md).
+For detailed documentation and setup instructions, see the main application README.md.
 
-The application provided application configuration are setup for the performance test runs excluding decentralized identity complexity. The application is configured to run without verifiable credentials using JWT tokens provided from Keycloak.
+The provided application configuration is optimized for performance testing and excludes the complexity of decentralized identity. In this configuration, verifiable credentials are not used; instead, JWTs issued by Keycloak are used for authentication and authorization.
 
-For runs with decentralized identity, an environment including an EUDI verifier, as well as valid verifiable credentials is required. 
+To execute tests involving decentralized identity, an environment with an EUDI-compliant verifier and valid verifiable credentials must be available and properly configured.
